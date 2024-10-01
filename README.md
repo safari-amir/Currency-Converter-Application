@@ -2,6 +2,8 @@
 
 # Currency Converter Application
 
+<img src="./images/image.png" width="800">
+
 This project is a simple currency converter that uses real-time exchange rates. It consists of two main components:
 1. A Python script (`currency_convertor.py`) for fetching and converting currencies via an external API.
 2. A web-based interface built using Streamlit (`app.py`) for users to input currencies and amounts, and view the conversion results.
