@@ -1,6 +1,4 @@
-Here’s a basic `README.md` file that explains how to use the code:
 
----
 
 # Currency Converter Application
 
