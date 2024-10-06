@@ -2,7 +2,7 @@ import streamlit as st
 from constants import currency_list
 from currency_convertor import get_exchange_rate, convert_currency
 import datetime
-#import humanize
+import humanize
 
 # Set the title of the Streamlit app
 st.title(':dollar: Currency Converter')
@@ -24,14 +24,14 @@ if amount > 0 and base_currency and target_currency:
     
     # Calculate the time since the exchange rate was last updated
     time_diff = datetime.datetime.now() - datetime.datetime.fromtimestamp(time_update)
-    #time_ago = humanize.naturaltime(time_diff)
+    time_ago = humanize.naturaltime(time_diff)
 
     # If the exchange rate was successfully retrieved, show the conversion result
     if exchange_rate:
         convert_result = convert_currency(amount, exchange_rate)
         
         # Display exchange rate and when it was last updated
-        st.success(f"✅ Exchange Rate: {exchange_rate:.4f} (Last updated: {time_diff})")
+        st.success(f"✅ Exchange Rate: {exchange_rate:.4f} (Last updated: {time_ago})")
         
         # Layout for displaying conversion metrics in a row
         col1, col2, col3 = st.columns(3)
